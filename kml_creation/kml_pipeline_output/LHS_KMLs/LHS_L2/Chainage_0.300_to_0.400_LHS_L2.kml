@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="1115">
+        <Style id="1120">
+            <PolyStyle id="1121">
+                <colorMode>normal</colorMode>
+                <fill>0</fill>
+                <outline>1</outline>
+            </PolyStyle>
+        </Style>
+        <Placemark id="1117">
+            <name>Chainage_0.300_to_0.305_LHS_L2</name>
+            <styleUrl>#1120</styleUrl>
+            <Polygon id="1116">
+                <outerBoundaryIs>
+                    <LinearRing id="1118">
+                        <coordinates>77.08190246829864,12.60965484710766,0.0 77.08190246829864,12.60965484710766,0.0 77.08187890791345,12.60967507393972,0.0 77.08187890791345,12.60967507393972,0.0 77.08190246829864,12.60965484710766,0.0</coordinates>
+                    </LinearRing>
+                </outerBoundaryIs>
+            </Polygon>
+        </Placemark>
+    </Document>
+</kml>
