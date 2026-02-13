@@ -334,9 +334,11 @@ app.get('/data', (req, res) => {
 // Serve static frontend files in production
 if (process.env.NODE_ENV === 'production') {
     const frontendBuildPath = path.join(__dirname, '../frontend/build');
+
     app.use(express.static(frontendBuildPath));
-    
-    app.get('*', (req, res) => {
+
+    // Catch-all route (Express v5 compatible)
+    app.all('*', (req, res) => {
         res.sendFile(path.join(frontendBuildPath, 'index.html'));
     });
 }
