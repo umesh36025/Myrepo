@@ -331,17 +331,18 @@ app.get('/data', (req, res) => {
     }
 });
 
-// Serve static frontend files in production
 if (process.env.NODE_ENV === 'production') {
     const frontendBuildPath = path.join(__dirname, '../frontend/build');
 
+    // Serve static files
     app.use(express.static(frontendBuildPath));
 
-    // Catch-all route (Express v5 compatible)
-    app.all('*', (req, res) => {
+    // Catch-all route for SPA (React, Vue, etc.)
+    app.get('/*', (req, res) => {
         res.sendFile(path.join(frontendBuildPath, 'index.html'));
     });
 }
+
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
